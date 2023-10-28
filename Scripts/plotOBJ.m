@@ -2,5 +2,5 @@
 
 function plotOBJ(UIAxes, vertices, facets)
     %scatter3(UIAxes, vertices(:,1), vertices(:,2), vertices(:,3),10, 'k', 'filled');
-    patch(UIAxes, 'Faces',facets,'Vertices',vertices,'FaceColor','green', 'EdgeColor', 'k', 'Linestyle', ':');
+    patch(UIAxes,'Faces',facets,'Vertices',vertices,'FaceColor','blue','EdgeColor','k','Linestyle',':');
 end
