@@ -11,4 +11,17 @@
 
 function model = trainContactLocalizationML(touchData)
 
+    % Point Log Data: Sensor data from touching a location on the object
+    % >> touchData.PL ->                   [1xn] vector of all Point Log data sets
+    % >>>> touchData.PL.touchPos ->        [x,y,z] location of touch
+    % >>>> touchData.PL.sensorStateRaw ->  [nxm] vector of all sensor data where n = sample size of point log and m = number of sensors
+    % >>>> touchData.PL.sensorStateAvg ->  [1xm] vector of the averages of sensor data by sample size where m = number of sensors
+
+    numTouches = length(touchdata.PL);      % Number of touches
+
+
+
+
+
+
 end
