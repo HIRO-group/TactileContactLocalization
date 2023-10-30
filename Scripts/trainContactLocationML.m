@@ -18,7 +18,7 @@ function model = trainContactLocalizationML(touchData)
     % >>>> touchData.PL.sensorStateAvg ->  [1xm] vector of the averages of sensor data by sample size where m = number of sensors
 
     numTouches = length(touchdata.PL);      % Number of touches
-
+    %Thomas branch test
 
 
 
