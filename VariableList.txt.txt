@@ -9,13 +9,13 @@ touchData ->  Struct containing all data needed for ML training from a data coll
 >> touchData.name ->                 Name of data set
 
 % Point Log Data: Sensor data from touching a location on the object
->> touchData.PL ->                   [1xn] vector of all Point Log data sets
+>> touchData.PL ->                   [1xpl] vector of all Point Log data sets, pl = number of point logs
 >>>> touchData.PL.touchPos ->        [x,y,z] location of touch
 >>>> touchData.PL.sensorStateRaw ->  [nxm] vector of all sensor data where n = sample size of point log and m = number of sensors
 >>>> touchData.PL.sensorStateAvg ->  [1xm] vector of the averages of sensor data by sample size where m = number of sensors
 
 % Calibration Point Log: Sensor data when no contact is made
->> touchData.CPL ->                  [1xn] vector of all Calibration Point Log data sets
+>> touchData.CPL ->                  Single Calibration Point Log data sets
 >>>> touchData.CPL.sensorStateRaw -> [nxm] vector of all sensor data where n = sample size of point log and m = number of sensors
 >>>> touchData.CPL.sensorStateAvg -> [1xm] vector of the averages of sensor data by sample size where m = number of sensors
 
