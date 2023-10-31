@@ -9,10 +9,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i = 0; i < num_TX * num_RX; i++) {
+  for (int i = 1; i < num_TX * num_RX; i++) {
     Serial.print(random(0, 300)); // The +30 is to be sure it's positive
     Serial.print(",");
   }
+  Serial.print(random(0, 300));
   Serial.println();
 
 }
