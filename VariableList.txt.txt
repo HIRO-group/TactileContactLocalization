@@ -25,10 +25,6 @@ touchData ->  Struct containing all data needed for ML training from a data coll
 >>>> touchData.obj.f ->		     [mx3] matrix of vertex locations in implied body frame
 >>>> touchData.obj.fileLoc ->	     string of object file location from main directory
 
->> touchData.stl  ->             Struct for stl data
->>>> touchData.stl.fe ->         Struct containing all information of an fegeometry
->>>> touchData.stl.fileLoc ->	 string of object file location from main directory
-
 % Sensor Locations
 >> touchData.sns ->		     [1xn] matrix of sensor structs
 >>>> touchData.sns.posPred ->	     [x,y,z] matrix of predicted sensor location
