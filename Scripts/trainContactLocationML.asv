@@ -40,14 +40,14 @@ function model = trainContactLocationML(touchData)
         sensorStateMat(i,:) = touchData.PL(i).sensorStateAvg;
     end
 
-    % Store the result in a string array for the neural network
+    % Store the result in a cell vector
     for i = 1:length(touchPosMat(:,1))
-        stringMat{i} = mat2str(touchPosMat(i,:));
+        cellMat{i} = touchPosMat(i,:);
     end
 
-
     % Create the neural net model
-    model = fitcnet(sensorStateMat, stringMat);
+    model = fitcnet(sensorStateMat, cellm)
     
+
 
 end

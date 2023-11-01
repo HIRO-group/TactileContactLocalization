@@ -22,7 +22,7 @@ load('Training_Data_ConeSkinData_RND_9PL_2.mat');
 % Call the ML function
 [xModel, yModel, zModel] = trainContactLocationML_LinearReg(touchData);
 
-
+model = trainContactLocationML(touchData);
 
 
 
