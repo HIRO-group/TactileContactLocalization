@@ -9,7 +9,7 @@
 % model ->      a matlab model object that takes in sensor states and returns a
 %               location prediction
 
-function model = trainContactLocalizationML(touchData)
+function model = trainContactLocationML(touchData)
 
     % Point Log Data: Sensor data from touching a location on the object
     % >> touchData.PL ->                   [1xn] vector of all Point Log data sets

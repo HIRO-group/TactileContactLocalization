@@ -8,13 +8,19 @@ close all; clear; clc;
 % three models with x, y, and z as the response variables
 
 % Number of samples and sensors
-numSamples = 1000;
-numSensors = 100;
+% numSamples = 1000;
+% numSensors = 100;
+% 
+% predictVars = rand(numSamples, numSensors);
+% responseVars = linspace(1,5,numSamples)';
+% 
+% mdl = fitlm(predictVars, responseVars);
 
-predictVars = rand(numSamples, numSensors);
-responseVars = linspace(1,5,numSamples)';
+% Test on training data
+load('Training_Data_ConeSkinData_RND_9PL_2.mat');
 
-mdl = fitlm(predictVars, responseVars);
+% Call the ML function
+[xModel, yModel, zModel] = trainContactLocationML_LinearReg(touchData);
 
 
 
