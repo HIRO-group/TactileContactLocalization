@@ -15,9 +15,9 @@ function dataClean = readSkin(skinObj)
     data = readline(skinObj);
     seperatedData = split(data, ',');
     dataClean = zeros(1, length(seperatedData));
-    if length(dataClean) > 300
-        error("Unexpected read size!");
-    end
+%     if length(dataClean) > 
+%         error("Unexpected read size!");
+%     end
     for i = 1:length(dataClean)
 
         val = str2double(seperatedData(i));
