@@ -37,6 +37,7 @@ end
 
 %% For loop test
 numSensors = length(sensorStateMat(1,:));
+<<<<<<< Updated upstream
 stepSize = 0.1;
 
 % Max 
@@ -46,6 +47,43 @@ xMax = max(touchPosMat(:,1));
 
 for i = 1:numSensors
     for j = 
+=======
+stepSize = 0.0001;
+
+% Max and minimum values
+xMin = min(touchPosMat(:,1));
+xMax = max(touchPosMat(:,1));
+
+yMin = min(touchPosMat(:,2));
+yMax = max(touchPosMat(:,2));
+
+zMin = min(touchPosMat(:,3));
+zMax = max(touchPosMat(:,3));
+
+
+% Loop through all sensors
+for j = 1:numSensors
+    % Measurements for a given sensor
+    sensorMeas = distanceMat(:,j);
+
+    % For a given sensor, loop through all touch positions
+    for i = 1:numTouches
+        currTouch = touchPosMat(i,:);
+        currDist = distanceMat(m, i);
+
+        minDist = 99999;
+        for x = xMin:stepSize:xMax
+            for y = yMin:stepSize:yMax
+                for z = zMin:stepSize:zMax
+    
+    
+                end
+            end
+        end
+    end
+end
+
+>>>>>>> Stashed changes
 
 
 
