@@ -50,9 +50,6 @@ zMin = min(touchPosMat(:,3));
 zMax = max(touchPosMat(:,3));
 
 
-
-
-
 % Loop through all sensors
 test = 0;
 for j = 1:numSensors
@@ -67,8 +64,7 @@ for j = 1:numSensors
         for x = xMin:stepSize:xMax
             for y = yMin:stepSize:yMax
                 for z = zMin:stepSize:zMax
-    
-                    test = test + 1;
+
                 end
             end
         end

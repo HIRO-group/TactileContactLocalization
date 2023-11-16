@@ -40,14 +40,13 @@ function model = trainContactLocationML(touchData)
         sensorStateMat(i,:) = touchData.PL(i).sensorStateAvg;
     end
 
-    % Store the result in a string array for the neural network
-    for i = 1:length(touchPosMat(:,1))
-        stringMat{i} = mat2str(touchPosMat(i,:));
-    end
-
-
     % Create the neural net model
-    model = fitcnet(sensorStateMat, stringMat);
+    % net = trainNetwork(features,layers,options) trains a neural network for feature classification 
+    % or regression tasks (for example, a multilayer perceptron (MLP) neural network) 
+    % using the feature data and responses specified by features.
+
     
+
+    model = trainNetwork(features,layers,options);
 
 end
