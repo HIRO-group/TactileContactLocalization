@@ -9,7 +9,7 @@
 % model ->      a matlab model object that takes in sensor states and returns a
 %               location prediction
 
-function model = trainContactLocalizationML(touchData)
+function model = trainContactLocationML(touchData, )
 
     % Point Log Data: Sensor data from touching a location on the object
     % >> touchData.PL ->                   [1xn] vector of all Point Log data sets
@@ -18,10 +18,14 @@ function model = trainContactLocalizationML(touchData)
     % >>>> touchData.PL.sensorStateAvg ->  [1xm] vector of the averages of sensor data by sample size where m = number of sensors
 
     numTouches = length(touchdata.PL);      % Number of touches
+    inputs = SkinDataSet.dataRawLin;
+    outputs = SkinDataSet.posLin;
 
-
-
-
-
+    % Create a feedforward neural network with 4 input neurons and 2 output neurons
+    net = feedforwardnet(10);
+    
+    % Train the neural network using the inputs and targets
+    %[net,tr] = train(net,dataAvgs,location);
+    [net,tr] = train(net,inputs,outputs);
 
 end

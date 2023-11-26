@@ -20,8 +20,8 @@ serialPort = 'COM4' #Windows
 
 # Main Parameters
 ser = serial.Serial(serialPort, 115200) #Serial port /dev/ttyACM0, 9600 baud
-num_TX = 7
-num_RX = 6
+num_TX = 8
+num_RX = 8
 threshold = 100
 numSensors = num_TX*num_RX
 calibVals = [[0 for j in range(num_RX)] for i in range(num_TX)]
