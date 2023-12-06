@@ -1,3 +1,11 @@
+To use and edit the app, make sure you have Matlab App Designer installed. After cloning the repository 
+with "git clone https://github.com/cKohl10/TactileContactLocalization.git", run the main app window named
+"ContactLocalizationApp.mlapp". 
+
+The window will automatically search for a serial input connected to the host 
+device streaming sensor values with a comma delimeter. This has only been tested with Arduino microcontrollers
+but should still work as long as the serial input is what it is expecting.
+
 ######## Arduino Connection #########
 skinObj -> Serial connection to the arduino. Use this when calling readSkin
 
@@ -34,3 +42,4 @@ touchData ->  Struct containing all data needed for ML training from a data coll
 >> touchData.sns ->		     [1xn] matrix of sensor structs
 >>>> touchData.sns.posPred ->	     [x,y,z] matrix of predicted sensor location
 >>>> touchData.sns.posReal -> 	     [x,y,z] matrix of real sensor locations (if given)
+
