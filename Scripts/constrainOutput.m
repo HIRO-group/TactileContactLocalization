@@ -3,6 +3,9 @@ function predFinal = constrainOutput(pred, points)
 %constrain the output to be one of the points located in the variable
 %points. It will iterate through the points and determine the closest point
 %to the prediction
+% points: set of discrete points on the surface [n x 3] 
+% pred: original prediction of the ML model
+% predFinal: final prediction constrained to the surface
 
     % Create matrix of the prediction
     predMat = pred .* ones(length(points(:,1)), 3);
@@ -16,7 +19,7 @@ function predFinal = constrainOutput(pred, points)
     [~,ind] = min(totalDist);
 
     % Get the new prediction
-    predFinal = points(ind);
+    predFinal = points(ind, :);
 
 end
 
