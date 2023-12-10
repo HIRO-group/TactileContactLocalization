@@ -33,6 +33,7 @@ touchData ->  Struct containing all data needed for ML training from a data coll
 >>>> touchData.obj.v ->		     [nx3] matrix of vertices that form each face verts  
 >>>> touchData.obj.f ->		     [mx3] matrix of vertex locations in implied body frame
 >>>> touchData.obj.fileLoc ->	     string of object file location from main directory
+>>>> touchData.obj.Points ->      [nx3] matrix of discrete points along the surface
 
 >> touchData.stl  ->             Struct for stl data
 >>>> touchData.stl.fe ->         Struct containing all information of an fegeometry
