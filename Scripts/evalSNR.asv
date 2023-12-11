@@ -1,0 +1,7 @@
+%Finds the SNR of the touchdata
+
+function avgSNR = evalSNR(touchData)
+    for i = 1:length(touchData.PL)
+        touchData.CPL(i).std = std(touchData.PL(1).sensorStateAvg);
+    end
+end
