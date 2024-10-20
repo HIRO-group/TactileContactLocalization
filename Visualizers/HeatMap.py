@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 ###### Comment out incorrect serials #######
-serialPort = 'COM4' #Windows
+serialPort = 'COM5' #Windows
 #serialPort = '/dev/ttyACM0' #Linux
 
 

@@ -3,13 +3,14 @@
 clc; close all; clear;
 
 % Specify the directory containing the .m files
-directoryPath = "../Training_Data"; % Change this to your directory path
+directoryPath = "Training_Data"; % Change this to your directory path
 
 % Get a list of all .m files in the directory
 files = dir(fullfile(directoryPath, '*.mat'));
 
 SNR = zeros(1,length(files));
 PLs = zeros(1,length(files));
+max_val = zeros(1,length(files));
 
 % Loop through each file and load it
 for k = 1:length(files)
@@ -25,10 +26,15 @@ for k = 1:length(files)
     PLs(k) = length(touchData.PL);
 end
 
+%Fit data
+p = polyfit(PLs,SNR,1);
+fp = @(x) p(1).*x + p(2);
+
 figure();
 hold on;
 grid on;
 scatter(PLs, SNR, 'k', 'filled');
+plot([min(PLs), max(PLs)], [fp(min(PLs)), fp(max(PLs))], '--');
 title("Average Sensor SNR per Contact Model");
 xlabel("Point Logs Used for Training");
 ylabel("Average SNR (dB)");
