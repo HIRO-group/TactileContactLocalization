@@ -1,5 +1,5 @@
 To use and edit the app, make sure you have Matlab App Designer installed. After cloning the repository 
-with "git clone https://github.com/cKohl10/TactileContactLocalization.git", run the main app window named
+with "git clone https://github.com/HIRO-group/TactileContactLocalization.git", run the main app window named
 "ContactLocalizationApp.mlapp". 
 
 The window will automatically search for a serial input connected to the host 
